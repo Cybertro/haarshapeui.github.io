@@ -1,0 +1,3394 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <!-- Prism.js CSS -->
+  <link href="assets/css/prism.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <title>Food Delivery - React Native Template</title>
+</head>
+
+<html lang="en">
+  <body>
+    <!-- SIDE NAVBAR TOOGLE-->
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">
+      <i class="fa fa-bars"></i>
+    </label>
+
+    <!-- SIDE NAVBAR -->
+    <aside class="sidenav">
+      <a href="#introduction" class="nav-link active">Introduction</a>
+
+      <a href="#getting-started" class="dropdown-btn nav-link">
+        <div class="row-between-center">
+          Getting Started
+          <i class="fa fa-chevron-down"></i>
+        </div>
+      </a>
+      <div class="dropdown-container">
+        <a href="#required-environment" class="nav-link">
+          Required Environment
+        </a>
+
+        <a href="#installing-and-running-the-project" class="nav-link">
+          Installing and Running the Project
+        </a>
+
+        <a href="#file-structure" class="nav-link">File Structure</a>
+      </div>
+
+      <a href="#components" class="dropdown-btn nav-link">
+        Components
+        <i class="fa fa-chevron-down"></i>
+      </a>
+      <div class="dropdown-container">
+        <a href="#avatar" class="nav-link">Avatar</a>
+        <a href="#bottomsheet" class="nav-link">BottomSheet</a>
+        <a href="#buttons" class="nav-link">Buttons</a>
+        <a href="#cards" class="nav-link">Cards</a>
+        <a href="#creditcard" class="nav-link">CreditCard</a>
+        <a href="#divider" class="nav-link">Divider</a>
+        <a href="#emptystate" class="nav-link">EmptyState</a>
+        <a href="#gradientcontainer" class="nav-link">GradientContainer</a>
+        <a href="#icon" class="nav-link">Icon</a>
+        <a href="#keyboard" class="nav-link">Keyboard</a>
+        <a href="#logo" class="nav-link">Logo</a>
+        <a href="#modals" class="nav-link">Modals</a>
+        <a href="#navigation" class="nav-link">Navigation</a>
+        <a href="#pickers" class="nav-link">Pickers</a>
+        <a href="#pricerating" class="nav-link">PriceRating</a>
+        <a href="#starrating" class="nav-link">StarRating</a>
+        <a href="#text" class="nav-link">Text</a>
+        <a href="#textinputs" class="nav-link">TextInputs</a>
+        <a href="#toucableitem" class="nav-link">ToucableItem</a>
+      </div>
+
+      <a href="#screens" class="nav-link">Screens</a>
+
+      <a href="#customization" class="nav-link">Customization</a>
+
+      <a href="#changelog" class="nav-link">Changelog</a>
+
+      <a href="#faq" class="nav-link">FAQ</a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+      <!-- INTRODUCTION -->
+      <section id="introduction" class="section">
+        <header class="section-header">
+          <h1 class="section-heading">Introduction</h1>
+
+          <p class="section-description">
+            Thank you for purchasing our mobile application template.
+            If you have any questions that are beyond the scope of this help file, please feel free to email us via our user page contact form <a href="https://themeforest.net/user/appdrops" class="text-link" target="_blank">here</a>.
+          </p>
+
+          <div class="section-subheader">
+            <h2 class="section-subheading">
+              Food Delivery - React Native Template
+            </h2>
+          </div>
+
+          <p class="section-description">
+            Food Delivery is component based application template for
+            <a
+              href="https://reactnative.dev/"
+              target="_blank"
+              class="text-link"
+            >
+              React Native</a
+            >. Source code has been written in JavaScript and the final
+            application can be built both for Android and iOS platforms. The application has more than 25 components, 50 screen container layouts and the
+            visual design can easily be customized.
+          </p>
+
+          <p class="section-description">
+            Version: 2.0.0.
+          </p>
+          <p class="section-description">
+            Last update: April 19, 2020.
+          </p>
+          <p class="section-description">
+            Release date: September 27, 2019.
+          </p>
+          <p class="section-description">
+            Author Team: <a href="https://themeforest.net/user/appdrops" class="text-link" target="_blank">AppDrops</a>
+          </p>
+          <p class="section-description">
+            Email: <a href="mailto:dev.appdrops@gmail.com" class="text-link">dev.appdrops@gmail.com</a>
+          </p>
+        </header>
+      </section>
+
+      <!-- GETTING STARTED -->
+      <section id="getting-started" class="section">
+        <header class="section-header">
+          <h1 class="section-heading">Getting Started</h1>
+          <p class="section-description">
+            This section will help you walk through the minimum required setup
+            to run Food Delivery project.
+          </p>
+        </header>
+
+        <div id="required-environment" class="section-subsection">
+          <h2 class="section-subheading">Required Environment</h2>
+
+          <div class="tabs">
+            <button id="defaultOpen" class="tab-link" onclick="openTab(event, 'react-native')">React Native CLI - PRO version</button>
+            <button class="tab-link" onclick="openTab(event, 'expo')">Expo CLI - EXPO version</button>
+          </div>
+
+          <!-- react native tab content -->
+          <div class="react-native tab-content">
+            <div class="hint info">
+              <div class="hint-icon">
+                <i class="fa fa-exclamation-circle"></i>
+              </div>
+              <p><b>Important</b></p>
+              <p>
+                In order to build the application, please make sure you have
+                already install React Native and run the simulator successful base
+                on
+                <a
+                  href="https://reactnative.dev/docs/environment-setup"
+                  target="_blank"
+                  class="text-link"
+                  >React Native CLI Quickstart guide</a
+                >, it will help you install and build your first React Native demo
+                app. The instructions are a bit different depending on your
+                development operating system, and whether you want to start
+                developing for iOS or Android.
+              </p>
+            </div>
+          </div>
+
+          <!-- expo tab content -->
+          <div class="expo tab-content">
+            <div class="hint info">
+              <div class="hint-icon">
+                <i class="fa fa-exclamation-circle"></i>
+              </div>
+              <p><b>Important</b></p>
+              <p>
+                In order to build the application, please make sure you have
+                already install <a href="https://expo.io/" target="_blank" class="text-link">Expo</a> base
+                on <a href="https://expo.io/learn" target="_blank" class="text-link">Expo CLI Quickstart guide</a>, it will help you install and build your first Expo demo
+                app.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="installing-and-running-the-project" class="section-subsection">
+          <h2 class="section-subheading">Installing and Running the Project</h2>
+          <p>After your system has met the previous requirements, you can build and run the application as follows:</p>
+          
+          <!-- react native tab content -->
+          <div class="react-native tab-content">
+            <ul class="step-list">
+              <li>
+                <p>Unzip the folder you have downloaded from the marketplace. Food Delivery - React Native Template project is in folder "FoodDelivery_Pro"</p>
+              </li>
+              <li>
+                <p>In terminal, navigate to the folder "FoodDelivery_Pro" where you unziped the files</p>
+              </li>
+              <li>
+                <p>Run the following command:</p>
+                <p>
+                  <pre>
+                    <code class="language-shell">
+                      npm install
+                      # or with yarn
+                      # yarn install
+                    </code>
+                  </pre>
+                </p>
+              </li>
+              <li>
+                  <p><b>Link native dependencies on iOS</b>, make sure you have <a href="https://cocoapods.org/" target="_blank" class="text-link">Cocoapods</a> installed. Then run:</p>
+                  <p>
+                    <pre>
+                      <code class="language-shell">
+                        cd ios
+                        pod install
+                        cd ..
+                      </code>
+                    </pre>
+                  </p>
+                </li>
+              <li>Open simulator or connect your mobile device via USB</li>
+              <li>
+                <p>Start react packager / server</p>
+                <p>
+                  <pre>
+                    <code class="language-shell">
+                      react-native start
+                      # you can also use npm or yarn
+                      # npm start
+                    </code>
+                  </pre>
+                </p>
+              </li>
+              <li>
+                  <p>Run instructions for <b>Android</b>. Open new terminal tab and run command:</p>
+                  <p><pre><code class="language-shell">react-native run-android</code></pre></p>
+              </li>
+              <li>
+                  <p>Run instructions for <b>iOS</b></p>
+                  <p>
+                    <pre>
+                      <code class="language-shell">
+                        react-native run-ios
+                        # or with Xcode
+                        # open FoodDelivery_Pro/ios/FoodDelivery_Pro.xcodeproj in Xcode and hit the Run button
+                      </code>
+                    </pre>
+                  </p>
+              </li>
+              <li><p>If everything is set up correctly, you should see your new app running in your simulator (or mobile device) shortly.</p></li>
+            </ul>
+          </div>
+
+          <!-- expo native tab content -->
+          <div class="expo tab-content">
+              <ul class="step-list">
+                <li>Unzip the folder you have downloaded from the marketplace. Food Delivery - React Native Template project is in folder "FoodDelivery_Expo"</li>
+                <li>In terminal, navigate to the folder "FoodDelivery_Expo" where you unziped the files</li>
+                <li>
+                  <p>Run the following command:</p>
+                  <p>
+                    <pre>
+                      <code class="language-shell">
+                        npm install
+                        # or with yarn
+                        # yarn install
+                      </code>
+                    </pre>
+                  </p>
+                </li>
+                <li>
+                  <p>Start a development server</p>
+                  <p>
+                    <pre>
+                      <code class="language-shell">
+                        expo start
+                        # or with npm
+                        # npm start
+                      </code>
+                    </pre>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Install the Expo client app on your <a href="https://apps.apple.com/app/apple-store/id982107779" target="_blank" class="text-link">iOS</a> or <a href="https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www" target="_blank" class="text-link">Android</a> phone and connect to the same wireless network as your computer.
+                    On Android, use the Expo app to scan the QR code from your terminal to open your project.
+                    On iOS, follow on-screen instructions to get a link.
+                  </p>
+                </li>
+              </ul>
+            </div>
+        </div>
+
+        <div id="file-structure" class="section-subsection">
+          <h2 class="section-subheading">File Structure</h2>
+          <p>Below is how the project file structure looks like.</p>
+
+          <!-- react native tab content -->
+          <div class="react-native tab-content">
+            <img class="medium-img" src="assets/img/file_structure.png" alt="File Structure"/>
+          </div>
+
+          <!-- expo tab content -->
+          <div class="expo tab-content">
+            <img class="medium-img" src="assets/img/file_structure_expo.png" alt="File Structure Expo"/>
+          </div>
+
+          <p>
+            <pre class="inline-code"><code class="language-shell">App.js</code></pre> file is the entry point of the application, it renders main navigator (MainNavigatorA is imported by default). 
+          </p>
+          <p><pre class="inline-code"><code class="language-shell">src</code></pre> folder contains all the files that make the application, grouped as follows:</p>
+          <img class="medium-img" src="assets/img/src_structure.png" alt="File Structure"/>
+
+          <p><pre class="inline-code"><code class="language-shell">src/assets</code></pre> folder contains all dummy images used in application.</p>
+
+          <p><pre class="inline-code"><code class="language-shell">src/components</code></pre> folder contains subfolders with source code of individual React Native components used throughout the application.
+            Individual components have been described in the separate section of this documentation.
+          </p>
+
+          <p><pre class="inline-code"><code class="language-shell">src/config</code></pre> folder contains a file in which you can choose one of predefined application themes (color scheme).</p>
+
+          <p><pre class="inline-code"><code class="language-shell">src/navigation</code></pre> folder contains files MainNavigatorA.js and MainNavigatorB.js, import one of these two files into App.js to see the difference in design.</p>
+          
+          <p><pre class="inline-code"><code class="language-shell">src/screens</code></pre> folder contains subfolders of predefined screen layouts (containers). Each screen layout has two or more different designs (e.g. AboutUsA.js, AboutUsB.js, ...)</p>
+        
+          <p><pre class="inline-code"><code class="language-shell">src/theme</code></pre> folder contains two files: colors.js with predefined color themes in it, and layout.js in which screen layout constants (width, height, margin, padding, ...) are defined.</p>
+        
+          <p><pre class="inline-code"><code class="language-shell">src/utils</code></pre> folder contains helper functions used by the application.</p>
+        </div>
+      </section>
+
+      <!-- COMPONENTS -->
+      <section id="components" class="section">
+        <header class="section-header">
+          <h1 class="section-heading">Components</h1>
+          <p class="section-description">
+            Food Delivery is made from effective building blocks referred to as
+            components. The components are constructed in pure React Native
+            platform along with some JavaScript functionality with rich set of
+            customisable properties. These components allow you to quickly build
+            the perfect interface.
+          </p>
+        </header>
+
+        <p class="section-description">
+          All components are well organized and grouped into folders as shown in the image below.
+        </p>
+        <p class="code-title">./src/components</p>
+        <img class="medium-img" src="assets/img/components.png" alt="components" />
+
+        <!-- AVATAR -->
+        <div id="avatar" class="section-subsection">
+          <h2 class="section-subheading">Avatar</h2>
+          <p class="section-description">
+            Avatars are found all over UI design from lists to profile screens. It is commonly used to represent a user and can contain photos or text.
+          </p>
+
+          <!-- Avatar Props-->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>borderRadius</td>
+                <td>number</td>
+                <td>0</td>
+                <td>Defines the radius of the avatar's corners</td>
+              </tr>
+              <tr>
+                <td>color</td>
+                <td>color</td>
+                <td>'#9e9e9e'</td>
+                <td>Background color of the avatar when imageUri is undefined</td>
+              </tr>
+              <tr>
+                <td>imageUri</td>
+                <td>ImageSourcePropType</td>
+                <td>-</td>
+                <td>The image source, either a remote URL or a local file resource</td>
+              </tr>
+              <tr>
+                <td>name</td>
+                <td>string</td>
+                <td>-</td>
+                <td>User's name, used to render name initials when imageUri is undefined</td>
+              </tr>
+              <tr>
+                <td>rounded</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>If true, the avatar takes a round shape</td>
+              </tr>
+              <tr>
+                <td>size</td>
+                <td>string( 'small' , 'medium' , 'large' ) or number</td>
+                <td>'medium'</td>
+                <td>Defines the size (width and height) of the avatar</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Avatart code sample -->
+          <p class="code-title">Avatar Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import Avatar from "../../components/avatar/Avatar";
+
+                ...
+
+                <Avatar
+                  imageUri="https://i.pravatar.cc/150?img=20"
+                  rounded={true}
+                  size={100}
+                />
+              </script>
+            </code>
+          </pre>
+        </div>
+
+        <!-- BOTTOMSHEET -->
+        <div id="bottomsheet" class="section-subsection">
+          <h2 class="section-subheading">BottomSheet</h2>
+          <p class="section-description">
+            Bottom sheets are surfaces containing supplementary content that are anchored to the bottom of the screen.
+          </p>
+
+          <!-- BottomSheet Props-->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>closeOnPressScrim</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>Tapping the scrim dismisses the bottom sheet</td>
+              </tr>
+              <tr>
+                <td>closeOnSwipeDown</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>Close the bottom sheet on swipe down</td>
+              </tr>
+              <tr>
+                <td>duration</td>
+                <td>number</td>
+                <td>300</td>
+                <td>Closing bottom sheet animation duration in milliseconds</td>
+              </tr>
+              <tr>
+                <td>height</td>
+                <td>number</td>
+                <td>112</td>
+                <td>Defines bottom sheet height</td>
+              </tr>
+              <tr>
+                <td>modalWrapperStyle</td>
+                <td>object (style)</td>
+                <td>{}</td>
+                <td>Style for bottom sheet scrim</td>
+              </tr>
+              <tr>
+                <td>modalContainerStyle</td>
+                <td>object (style)</td>
+                <td>{}</td>
+                <td>Style for bottom sheet container</td>
+              </tr>
+              <tr>
+                <td>rounded</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>If true, BottomSheet top takes a round shape</td>
+              </tr>
+              <tr>
+                <td>statusBarColor</td>
+                <td>color</td>
+                <td>'rgba(0, 0, 0, 0.2)'</td>
+                <td>Status bar color when bottom sheet is visible</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- BottomSheet methods open(), close() -->
+
+          <!-- BottomSheet code sample -->
+          <p class="code-title">BottomSheet Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import BottomSheet from "../../components/bottomsheet/BottomSheet";
+
+                ...
+
+                openBottomSheet = () => {
+                  this.bottomSheet.open()
+                };
+
+                ...
+
+                <BottomSheet
+                  ref={ref => {
+                    this.bottomSheet = ref;
+                  }}
+                  height={240}
+                >
+                  {/* Content goes here */}
+                </BottomSheet>
+              </script>
+            </code>
+          </pre>
+        </div>
+
+        <!-- BUTTONS -->
+        <div id="buttons" class="section-subsection">
+          <h2 class="section-subheading">Buttons</h2>
+          <p class="section-description">
+            Buttons are touchable elements used for various purposes like, submit or reset a form, navigate on click of the button, etc. There are three types of button components in application.
+          </p>
+
+          <h3 class="component-name">Button</h3>
+          <!-- Button Props-->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>activeOpacity</td>
+                <td>number</td>
+                <td>0.85</td>
+                <td>Determines what the opacity of the wrapped view should be when touch is active. The value should be between 0 and 1</td>
+              </tr>
+              <tr>
+                <td>borderColor</td>
+                <td>color</td>
+                <td>Colors.primaryColor</td>
+                <td>Border color of the button when outlined={true}</td>
+              </tr>
+              <tr>
+                <td>borderRadius</td>
+                <td>number</td>
+                <td>4</td>
+                <td>Defines the radius of the button's corners</td>
+              </tr>
+              <tr>
+                <td>buttonStyle</td>
+                <td>object (style)</td>
+                <td>-</td>
+                <td>Style for button</td>
+              </tr>
+              <tr>
+                <td>color</td>
+                <td>color</td>
+                <td>Colors.primaryColor</td>
+                <td>Background color of the button</td>
+              </tr>
+              <tr>
+                <td>disabled</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>If true, disable all interactions for this component</td>
+              </tr>
+              <tr>
+                <td>height</td>
+                <td>number</td>
+                <td>48</td>
+                <td>Defines the height of the button</td>
+              </tr>
+              <tr>
+                <td>iconColor</td>
+                <td>color</td>
+                <td>-</td>
+                <td>Button's icon color</td>
+              </tr>
+              <tr>
+                <td>onPress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps the button</td>
+              </tr>
+              <tr>
+                <td>outlined</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>If true, will apply outline button style</td>
+              </tr>
+              <tr>
+                <td>rounded</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>If true, will apply round button style</td>
+              </tr>
+              <tr>
+                <td>small</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>If true, will apply small button style</td>
+              </tr>
+              <tr>
+                <td>socialIconName</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Social FontAwesome icon name, e.g. "facebook-square", "google", ...</td>
+              </tr>
+              <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>"Button"</td>
+                <td>Text to display inside the button</td>
+              </tr>
+              <tr>
+                <td>titleColor</td>
+                <td>color</td>
+                <td>Colors.onPrimaryColor</td>
+                <td>Button's title color</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Button code sample -->
+          <p class="code-title">Button Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import Button from "../../components/buttons/Button";
+
+                ...
+
+                createAccount = () => {
+                  // do something
+                };
+
+                ...
+
+                <Button
+                  onPress={this.createAccount}
+                  color="#3b5998"
+                  socialIconName="facebook-square"
+                  iconColor="#fff"
+                  title="Facebook"
+                />
+              </script>
+            </code>
+          </pre>
+
+          <h3 class="component-name">ContainedButton</h3>
+          <!-- ContainedButton Props-->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>activeOpacity</td>
+                <td>number</td>
+                <td>0.85</td>
+                <td>Determines what the opacity of the wrapped view should be when touch is active. The value should be between 0 and 1</td>
+              </tr>
+              <tr>
+                <td>borderRadius</td>
+                <td>number</td>
+                <td>4</td>
+                <td>Defines the radius of the button's corners</td>
+              </tr>
+              <tr>
+                <td>buttonStyle</td>
+                <td>object (style)</td>
+                <td>-</td>
+                <td>Style for ContainedButton</td>
+              </tr>
+              <tr>
+                <td>color</td>
+                <td>color</td>
+                <td>Colors.primaryColor</td>
+                <td>Background color of the button</td>
+              </tr>
+              <tr>
+                <td>height</td>
+                <td>number</td>
+                <td>48</td>
+                <td>Defines the height of the button</td>
+              </tr>
+              <tr>
+                <td>iconColor</td>
+                <td>color</td>
+                <td>-</td>
+                <td>Button's icon color</td>
+              </tr>
+              <tr>
+                <td>iconName</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Ionicons icon name</td>
+              </tr>
+              <tr>
+                <td>onPress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps the button</td>
+              </tr>
+              <tr>
+                <td>rippleColor</td>
+                <td>color</td>
+                <td>"rgba(0, 0, 0, 0.16)"</td>
+                <td>Android ripple effect color</td>
+              </tr>
+              <tr>
+                <td>rounded</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>If true, will apply round button style</td>
+              </tr>
+              <tr>
+                <td>socialIconName</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Social FontAwesome icon name, e.g. "facebook-square", "google", ...</td>
+              </tr>
+              <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>"Button"</td>
+                <td>Text to display inside the button</td>
+              </tr>
+              <tr>
+                <td>titleColor</td>
+                <td>color</td>
+                <td>Colors.onPrimaryColor</td>
+                <td>Button's title color</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- ContainedButton code sample -->
+          <p class="code-title">ContainedButton Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import ContainedButton from "../../components/buttons/ContainedButton";
+
+                ...
+
+                signIn = () => {
+                  // do something
+                };
+
+                ...
+
+                <ContainedButton
+                  onPress={this.signIn}
+                  color="blue"
+                  title="Sign In"
+                />
+              </script>
+            </code>
+          </pre>
+
+          <h3 class="component-name">LinkButton</h3>
+          <!-- LinkButton Props-->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>onPress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps the button</td>
+              </tr>
+              <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>"Link Button"</td>
+                <td>Text to display inside the button</td>
+              </tr>
+              <tr>
+                <td>titleStyle</td>
+                <td>object (styles)</td>
+                <td>-</td>
+                <td>LinkButton's title style</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- LinkButton code sample -->
+          <p class="code-title">LinkButton Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import LinkButton from "../../components/buttons/LinkButton";
+
+                ...
+
+                <LinkButton
+                  onPress={this.doSomething}
+                  title="Skip"
+                  titleStyle={styles.linkButtonTitleStyle}
+                />
+              </script>
+            </code>
+          </pre>
+
+          <h3 class="component-name">OutlinedButton</h3>
+          <!-- OutlinedButton Props-->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>activeOpacity</td>
+                <td>number</td>
+                <td>0.85</td>
+                <td>Determines what the opacity of the wrapped view should be when touch is active. The value should be between 0 and 1</td>
+              </tr>
+              <tr>
+                <td>borderRadius</td>
+                <td>number</td>
+                <td>4</td>
+                <td>Defines the radius of the button's corners</td>
+              </tr>
+              <tr>
+                <td>borderColor</td>
+                <td>color</td>
+                <td>'rgba(0, 0, 0, .12)'</td>
+                <td>Border color of the button</td>
+              </tr>
+              <tr>
+                <td>buttonStyle</td>
+                <td>object (style)</td>
+                <td>-</td>
+                <td>Style for button</td>
+              </tr>
+              <tr>
+                <td>color</td>
+                <td>color</td>
+                <td>'transparent'</td>
+                <td>Background color of the button</td>
+              </tr>
+              <tr>
+                <td>height</td>
+                <td>number</td>
+                <td>48</td>
+                <td>Defines the height of the button</td>
+              </tr>
+              <tr>
+                <td>iconColor</td>
+                <td>color</td>
+                <td>-</td>
+                <td>Button's icon color</td>
+              </tr>
+              <tr>
+                <td>iconName</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Ionicons icon name</td>
+              </tr>
+              <tr>
+                <td>onPress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps the button</td>
+              </tr>
+              <tr>
+                <td>rippleColor</td>
+                <td>color</td>
+                <td>"rgba(0, 0, 0, 0.16)"</td>
+                <td>Android ripple effect color</td>
+              </tr>
+              <tr>
+                <td>rounded</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>If true, will apply round button style</td>
+              </tr>
+              <tr>
+                <td>socialIconName</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Social FontAwesome icon name, e.g. "facebook-square", "google", ...</td>
+              </tr>
+              <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>"Button"</td>
+                <td>Text to display inside the button</td>
+              </tr>
+              <tr>
+                <td>titleColor</td>
+                <td>color</td>
+                <td>Colors.onPrimaryColor</td>
+                <td>Button's title color</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- OutlinedButton code sample -->
+          <p class="code-title">OutlinedButton Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import OutlinedButton from "../../components/buttons/OutlinedButton";
+
+                ...
+
+                signIn = () => {
+                  // do something
+                };
+
+                ...
+
+                <OutlinedButton
+                  onPress={this.signIn}
+                  title="Sign In"
+                  titleColor="white"
+                  rippleColor={'rgba(255, 255, 255, 0.32)'}
+                />
+              </script>
+            </code>
+          </pre>
+        </div>
+
+        <!-- CARDS -->
+        <div id="cards" class="section-subsection">
+          <h2 class="section-subheading">Cards</h2>
+          <p class="section-description">
+            Cards support a wide variety of content, including images, text and actions about a single subject.
+          </p>
+
+          <h3 class="component-name">ActionProductCard</h3>
+          <!-- ActionProductCard Props-->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>activeOpacity</td>
+                <td>number</td>
+                <td>0.85</td>
+                <td>Determines what the opacity of the wrapped view should be when touch is active. The value should be between 0 and 1</td>
+              </tr>
+              <tr>
+                <td>imageUri</td>
+                <td>ImageSourcePropType</td>
+                <td>-</td>
+                <td>The product image source, either a remote URL or a local file resource</td>
+              </tr>
+              <tr>
+                <td>label</td>
+                <td>string( 'new' ) or any label string</td>
+                <td>-</td>
+                <td>Labels have many uses, including promotion and providing information on a product's origin, manufacturer (e.g., brand name), use, ...</td>
+              </tr>
+              <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Product name</td>
+              </tr>
+              <tr>
+                <td>price</td>
+                <td>number</td>
+                <td>0</td>
+                <td>Product price</td>
+              </tr>
+              <tr>
+                <td>discountPercentage</td>
+                <td>number</td>
+                <td>-</td>
+                <td>Product discount percentage</td>
+              </tr>
+              <tr>
+                <td>onPress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps on product card</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- ActionProductCard code sample -->
+          <p class="code-title">ActionProductCard Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import ActionProductCard from "../../components/cards/ActionProductCard";
+
+                ...
+
+                <ActionProductCard
+                  onPress={this.doSomething}
+                  imageUri="https://..."
+                  title="Chocolate cake"
+                  price={5.00}
+                  discountPercentage={10}
+                  label="new"
+                />
+              </script>
+            </code>
+          </pre>
+
+          <h3 class="component-name">ActionProductCardHorizontal</h3>
+          <!-- ActionProductCardHorizontal Props-->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>activeOpacity</td>
+                <td>number</td>
+                <td>0.85</td>
+                <td>Determines what the opacity of the wrapped view should be when touch is active. The value should be between 0 and 1</td>
+              </tr>
+              <tr>
+                <td>imageUri</td>
+                <td>ImageSourcePropType</td>
+                <td>-</td>
+                <td>The product image source, either a remote URL or a local file resource</td>
+              </tr>
+              <tr>
+                <td>label</td>
+                <td>string( 'new' ) or any label string</td>
+                <td>-</td>
+                <td>Labels have many uses, including promotion and providing information on a product's origin, manufacturer (e.g., brand name), use, ...</td>
+              </tr>
+              <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Product name</td>
+              </tr>
+              <tr>
+                <td>price</td>
+                <td>number</td>
+                <td>0</td>
+                <td>Product price</td>
+              </tr>
+              <tr>
+                <td>discountPercentage</td>
+                <td>number</td>
+                <td>-</td>
+                <td>Product discount percentage</td>
+              </tr>
+              <tr>
+                <td>onPress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps on product card</td>
+              </tr>
+              <tr>
+                <td>onPressAdd</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps on product's card plus sign</td>
+              </tr>
+              <tr>
+                <td>onPressRemove</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps on product's card minus sign</td>
+              </tr>
+              <tr>
+                <td>quantity</td>
+                <td>number</td>
+                <td>0</td>
+                <td>The quantity of this product added to the cart</td>
+              </tr>
+              <tr>
+                <td>swipeoutDisabled</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>If true, disable swipe out interactions for this component</td>
+              </tr>
+              <tr>
+                <td>swipeoutOnPressRemove</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps on product's card remove item button, after swipe out</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- ActionProductCardHorizontal code sample -->
+          <p class="code-title">ActionProductCardHorizontal Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import ActionProductCardHorizontal from "../../components/cards/ActionProductCardHorizontal";
+
+                ...
+
+                <ActionProductCardHorizontal
+                  onPress={this.navigateTo("Product")}
+                  onPressRemove={this.onPressRemove(item)}
+                  onPressAdd={this.onPressAdd(item)}
+                  imageUri="https://..."
+                  title="Chocolate cake"
+                  price={5.00}
+                  discountPercentage={10}
+                  label="new"
+                  quantity={2}
+                  swipeoutDisabled={false}
+                  swipeoutOnPressRemove={this.swipeoutOnPressRemove(item)}
+                />
+              </script>
+            </code>
+          </pre>
+
+          <h3 class="component-name">NotificationItem</h3>
+          <!-- NotificationItem Props-->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>activeOpacity</td>
+                <td>number</td>
+                <td>0.85</td>
+                <td>Determines what the opacity of the wrapped view should be when touch is active. The value should be between 0 and 1</td>
+              </tr>
+              <tr>
+                <td>type</td>
+                <td>string ( 'on_the_way', 'ready_for_delivery', 'failed_delivery', 'delivered', 'exception' )</td>
+                <td>-</td>
+                <td>Type of notification, depending on the status of the order</td>
+              </tr>
+              <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Displays notification item title</td>
+              </tr>
+              <tr>
+                <td>text</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Displays notification item short description text</td>
+              </tr>
+              <tr>
+                <td>meta</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Displays notification item short meta information</td>
+              </tr>
+              <tr>
+                <td>onPress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps on notification item</td>
+              </tr>
+              <tr>
+                <td>readOut</td>
+                <td>boolean</td>
+                <td>true</td>
+                <td>Notifies the user whether or not they have read the notification</td>
+              </tr>
+              <tr>
+                <td>swipeoutOnPressRemove</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps on notification item card remove item button, after swipe out</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- NotificationItem code sample -->
+          <p class="code-title">NotificationItem Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import NotificationItem from "../../components/cards/NotificationItem";
+
+                ...
+
+                <NotificationItem
+                  activeOpacity={0.85}
+                  type="delivered"
+                  title="YooHoo! Your order is delivered"
+                  text="We hope you like it! Please send us your feedback and rate."
+                  meta="1 min ago"
+                  // onPress={this.navigateTo("")}
+                  readOut={false}
+                  swipeoutOnPressRemove={this.swipeoutOnPressRemove(item)}
+                />
+              </script>
+            </code>
+          </pre>
+
+          <h3 class="component-name">OrderItemA, OrderItemB</h3>
+          <!-- OrderItemA Props-->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>activeOpacity</td>
+                <td>number</td>
+                <td>0.85</td>
+                <td>Determines what the opacity of the wrapped view should be when touch is active. The value should be between 0 and 1</td>
+              </tr>
+              <tr>
+                <td>onPress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps on product card</td>
+              </tr>
+              <tr>
+                <td>orderDate</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Displays the date of the order</td>
+              </tr>
+              <tr>
+                <td>orderItems</td>
+                <td>array[ { name, price } ]</td>
+                <td>-</td>
+                <td>Displays list of ordered items</td>
+              </tr>
+              <tr>
+                <td>orderNumber</td>
+                <td>number</td>
+                <td>-</td>
+                <td>Displays unique order number (id)</td>
+              </tr>
+              <tr>
+                <td>orderStatus</td>
+                <td>string( 'pending' , 'on-the-way' , 'delivered' )</td>
+                <td>-</td>
+                <td>Displays the current status of the order</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- OrderItemA code sample -->
+          <p class="code-title">OrderItemA Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import OrderItemA from "../../components/cards/OrderItemA";
+
+                ...
+
+                <OrderItemA
+                  activeOpacity={0.8}
+                  orderNumber={112}
+                  orderDate="22 July, 2019"
+                  orderItems={[
+                    {
+                      name: "Hot Dog",
+                      price: 4.99
+                    },
+                    {
+                      name: "Pizza",
+                      price: 8.99
+                    }
+                  ]}
+                  orderStatus="on-the-way"
+                  onPress={this.navigateTo("Product")}
+                />
+              </script>
+            </code>
+          </pre>
+
+          <h3 class="component-name">ProductCard</h3>
+          <!-- ProductCard Props-->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>activeOpacity</td>
+                <td>number</td>
+                <td>0.85</td>
+                <td>Determines what the opacity of the wrapped view should be when touch is active. The value should be between 0 and 1</td>
+              </tr>
+              <tr>
+                <td>imageUri</td>
+                <td>ImageSourcePropType</td>
+                <td>-</td>
+                <td>The product image source, either a remote URL or a local file resource</td>
+              </tr>
+              <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Product name</td>
+              </tr>
+              <tr>
+                <td>description</td>
+                <td>string</td>
+                <td>"Lorem Ipsum is simply dummy text of the printing and typesetting industry"</td>
+                <td>Product short description</td>
+              </tr>
+              <tr>
+                <td>price</td>
+                <td>number</td>
+                <td>0</td>
+                <td>Product price</td>
+              </tr>
+              <tr>
+                <td>onPress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps on product card</td>
+              </tr>
+              <tr>
+                <td>onPressAdd</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps on product's card plus sign</td>
+              </tr>
+              <tr>
+                <td>onPressRemove</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps on product's card minus sign</td>
+              </tr>
+              <tr>
+                <td>quantity</td>
+                <td>number</td>
+                <td>0</td>
+                <td>The quantity of this product added to the cart</td>
+              </tr>
+              <tr>
+                <td>swipeoutDisabled</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>If true, disable swipe out interactions for this component</td>
+              </tr>
+              <tr>
+                <td>swipeoutOnPressRemove</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps on product's card remove item button, after swipe out</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- ProductCard code sample -->
+          <p class="code-title">ProductCard Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import ProductCard from "../../components/cards/ProductCard";
+
+                ...
+
+                <ProductCard
+                  onPress={this.navigateTo("Product")}
+                  onPressRemove={this.onPressRemove(item)}
+                  onPressAdd={this.onPressAdd(item)}
+                  imageUri="https://..."
+                  title="Chocolate cake"
+                  description="Cake flavored with melted chocolate, cocoa powder"
+                  price={5.00}
+                  quantity={2}
+                  swipeoutDisabled={false}
+                  swipeoutOnPressRemove={this.swipeoutOnPressRemove(item)}
+                />
+              </script>
+            </code>
+          </pre>
+
+          <h3 class="component-name">RestaurantCard</h3>
+          <!-- RestaurantCard Props-->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>activeOpacity</td>
+                <td>number</td>
+                <td>0.85</td>
+                <td>Determines what the opacity of the wrapped view should be when touch is active. The value should be between 0 and 1</td>
+              </tr>
+              <tr>
+                <td>cuisines</td>
+                <td>string</td>
+                <td>-</td>
+                <td>List of available cuisines in restaurant</td>
+              </tr>
+              <tr>
+                <td>imageUri</td>
+                <td>ImageSourcePropType</td>
+                <td>-</td>
+                <td>The image source, either a remote URL or a local file resource</td>
+              </tr>
+              <tr>
+                <td>name</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Restaurant display name</td>
+              </tr>
+              <tr>
+                <td>price</td>
+                <td>number</td>
+                <td>-</td>
+                <td>Restaurant price rating number. The value should be integer between 0 and 4</td>
+              </tr>
+              <tr>
+                <td>rating</td>
+                <td>number</td>
+                <td>-</td>
+                <td>Restaurant star rating number. The value should be between 0 and 5</td>
+              </tr>
+              <tr>
+                <td>onPress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps on restaurant card</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- RestaurantCard code sample -->
+          <p class="code-title">RestaurantCard Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import RestaurantCard from "../../components/cards/RestaurantCard";
+
+                ...
+
+                <RestaurantCard
+                  onPress={this.navigateTo("Restaurant")}
+                  imageUri="https://..."
+                  name="Reastaurant Name"
+                  rating={4.8}
+                  price={3}
+                  cuisines="Japanese, Sushi, Thai, Italian, Pizza"
+                />
+              </script>
+            </code>
+          </pre>
+
+          <h3 class="component-name">SimpleProductCard</h3>
+          <!-- SimpleProductCard Props-->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>activeOpacity</td>
+                <td>number</td>
+                <td>0.85</td>
+                <td>Determines what the opacity of the wrapped view should be when touch is active. The value should be between 0 and 1</td>
+              </tr>
+              <tr>
+                <td>imageUri</td>
+                <td>ImageSourcePropType</td>
+                <td>-</td>
+                <td>The product image source, either a remote URL or a local file resource</td>
+              </tr>
+              <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Product name</td>
+              </tr>
+              <tr>
+                <td>description</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Product short description</td>
+              </tr>
+              <tr>
+                <td>price</td>
+                <td>number</td>
+                <td>0</td>
+                <td>Product price</td>
+              </tr>
+              <tr>
+                <td>onPress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps on product card</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- SimpleProductCard code sample -->
+          <p class="code-title">SimpleProductCard Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import SimpleProductCard from "../../components/cards/SimpleProductCard";
+
+                ...
+
+                <SimpleProductCard
+                  onPress={this.navigateTo("Product")}
+                  imageUri="https://..."
+                  title="Chocolate cake"
+                  description="Cake flavored with melted chocolate, cocoa powder"
+                  price={5.00}
+                />
+              </script>
+            </code>
+          </pre>
+
+          <h3 class="component-name">WideProductCard</h3>
+          <!-- WideProductCard Props-->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>activeOpacity</td>
+                <td>number</td>
+                <td>0.85</td>
+                <td>Determines what the opacity of the wrapped view should be when touch is active. The value should be between 0 and 1</td>
+              </tr>
+              <tr>
+                <td>favorite</td>
+                <td>boolean</td>
+                <td>-</td>
+                <td>Indicates if product is marked as favorite</td>
+              </tr>
+              <tr>
+                <td>imageUri</td>
+                <td>ImageSourcePropType</td>
+                <td>-</td>
+                <td>The product image source, either a remote URL or a local file resource</td>
+              </tr>
+              <tr>
+                <td>label</td>
+                <td>string( 'new' ) or any label string</td>
+                <td>-</td>
+                <td>Labels have many uses, including promotion and providing information on a product's origin, manufacturer (e.g., brand name), use, ...</td>
+              </tr>
+              <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Product name</td>
+              </tr>
+              <tr>
+                <td>price</td>
+                <td>number</td>
+                <td>0</td>
+                <td>Product price</td>
+              </tr>
+              <tr>
+                <td>discountPercentage</td>
+                <td>number</td>
+                <td>-</td>
+                <td>Product discount percentage</td>
+              </tr>
+              <tr>
+                <td>onPress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps on product card</td>
+              </tr>
+              <tr>
+                <td>onPressFavorite</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps on product favorite icon</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- WideProductCard code sample -->
+          <p class="code-title">WideProductCard Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import WideProductCard from "../../components/cards/WideProductCard";
+
+                ...
+
+                <WideProductCard
+                  onPress={this.navigateTo("Product")}
+                  imageUri="https://..."
+                  title="Chocolate cake"
+                  discountPercentage={10}
+                  label="new"
+                  rating={4.2}
+                  price={10.90}
+                  favorite={true}
+                  onPressFavorite={this.doSomething}
+                />
+              </script>
+            </code>
+          </pre>
+        </div>
+
+        <!-- CREDITCARD -->
+        <div id="creditcard" class="section-subsection">
+          <h2 class="section-subheading">CreditCard</h2>
+          <p class="section-description">
+            CreditCard is component used to display simple credit cards.
+          </p>
+
+          <!-- CreditCard Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>brand</td>
+                <td>string( 'visa' , 'mastercard' , 'discover' , 'amex' )</td>
+                <td>-</td>
+                <td>You need to explicitly specify the card brand</td>
+              </tr>
+              <tr>
+                <td>cardHolder</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Cardholder's name</td>
+              </tr>
+              <tr>
+                <td>colors</td>
+                <td>array[color]</td>
+                <td>[Colors.primaryGradientColor, Colors.secondaryGradientColor]</td>
+                <td>An array of colors for the gradient background</td>
+              </tr>
+              <tr>
+                <td>expiry</td>
+                <td>string( 'MM / YY' )</td>
+                <td>-</td>
+                <td>Credit card expiry (should be in MM/YY format)</td>
+              </tr>
+              <tr>
+                <td>last4Digits</td>
+                <td>number</td>
+                <td>-</td>
+                <td>Displays the last four digits of the credit card</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- CreditCard code sample -->
+          <p class="code-title">CreditCard Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import CreditCard from "../../components/creditcard/CreditCard";
+
+                ...
+
+                <CreditCard
+                  brand="visa"
+                  last4Digits="3456"
+                  cardHolder="Kristin Evans"
+                  expiry="09 / 21"
+                />
+              </script>
+            </code>
+          </pre>
+        </div>
+
+        <!-- DIVIDER -->
+        <div id="divider" class="section-subsection">
+          <h2 class="section-subheading">Divider</h2>
+          <p class="section-description">
+            Divider component creates a list separator, which can be used for grouping list items.
+          </p>
+
+          <!-- Divider Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>marginLeft</td>
+                <td>number</td>
+                <td>-</td>
+                <td>Divider's left margin size if type="inset"</td>
+              </tr>
+              <tr>
+                <td>type</td>
+                <td>string( 'full-bleed' , 'inset' , 'middle' )</td>
+                <td>'full-bleed'</td>
+                <td>Defines divider type</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Divider code sample -->
+          <p class="code-title">Divider Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import Divider from "../../components/divider/Divider";
+
+                ...
+
+                <Divider marginLeft={16} type="inset" />
+              </script>
+            </code>
+          </pre>
+        </div>
+
+        <!-- EMPTYSTATE -->
+        <div id="emptystate" class="section-subsection">
+          <h2 class="section-subheading">EmptyState</h2>
+          <p class="section-description">
+            Empty states are moments in a user's experience with a product where there is nothing to display.
+            First use, user cleared, no results, and errors are four of the most common types of empty states.
+          </p>
+
+          <!-- EmptyState Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>showIcon</td>
+                <td>boolean</td>
+                <td>-</td>
+                <td>If true, it will show empty state icon</td>
+              </tr>
+              <tr>
+                <td>iconName</td>
+                <td>string</td>
+                <td>-</td>
+                <td>MaterialCommunityIcons icon name</td>
+              </tr>
+              <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Empty state short title</td>
+              </tr>
+              <tr>
+                <td>message</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Empty state short message</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- EmptyState code sample -->
+          <p class="code-title">EmptyState Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import EmptyState from "../../components/emptystate/EmptyState";
+
+                ...
+
+                <EmptyState
+                  showIcon={true}
+                  iconName="cart-remove"
+                  title="Your Cart is Empty"
+                  message="Looks like you haven't added anything to your cart yet"
+                />
+              </script>
+            </code>
+          </pre>
+        </div>
+
+        <!-- GRADIENTCONTAINER -->
+        <div id="gradientcontainer" class="section-subsection">
+          <h2 class="section-subheading">GradientContainer</h2>
+          <p class="section-description">
+            Wrapper component with gradient background.
+          </p>
+
+          <!-- GradientContainer Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>children</td>
+                <td>React.Component</td>
+                <td>-</td>
+                <td>GradientContainer can wrap any react native component</td>
+              </tr>
+              <tr>
+                <td>colors</td>
+                <td>array[color]</td>
+                <td>[Colors.primaryGradientColor, Colors.secondaryGradientColor]</td>
+                <td>An array of colors for the gradient background</td>
+              </tr>
+              <tr>
+                <td>containerStyle</td>
+                <td>object (style)</td>
+                <td>-</td>
+                <td>Style for gradient container</td>
+              </tr>
+              <tr>
+                <td>end</td>
+                <td>object { x: number, y: number }</td>
+                <td>{ x: 0, y: 1 }</td>
+                <td>Defines the end of the gradient direction</td>
+              </tr>
+              <tr>
+                <td>start</td>
+                <td>object { x: number, y: number }</td>
+                <td>{ x: 0, y: 0 }</td>
+                <td>Defines the start of the gradient direction</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- GradientContainer code sample -->
+          <p class="code-title">GradientContainer Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import GradientContainer from "../../components/gradientcontainer/GradientContainer";
+
+                ...
+
+                <GradientContainer colors=["red", "green"]>
+                  {/* Child component goes here */}
+                </GradientContainer>
+              </script>
+            </code>
+          </pre>
+        </div>
+
+        <!-- ICON -->
+        <div id="icon" class="section-subsection">
+          <h2 class="section-subheading">Icon</h2>
+          <p class="section-description">
+            This component is used to display vector icons (react-native-vector-icons Ionicons). 
+          </p>
+
+          <!-- Icon Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>color</td>
+                <td>color</td>
+                <td>Colors.black</td>
+                <td>Color of the icon</td>
+              </tr>
+              <tr>
+                <td>name</td>
+                <td>string</td>
+                <td>-</td>
+                <td>What Ionicons to show</td>
+              </tr>
+              <tr>
+                <td>size</td>
+                <td>number</td>
+                <td>22</td>
+                <td>Size of the icon</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Icon code sample -->
+          <p class="code-title">Icon Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import Icon from "../../components/icon/Icon";
+
+                ...
+
+                <Icon name="ios-airplane" size={26} color="red" />
+                <Icon name="md-airplane" size={26} color="#0000ff" />
+              </script>
+            </code>
+          </pre>
+        </div>
+
+        <!-- NUMERICKEYBOARD -->
+        <div id="keyboard" class="section-subsection">
+          <h2 class="section-subheading">NumericKeyboard</h2>
+          <p class="section-description">
+            This component is used to display simple numeric keyboard instead of the system numeric keyboard. 
+          </p>
+
+          <!-- NumericKeyboard Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>actionButtonTitle</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Left action button title</td>
+              </tr>
+              <tr>
+                <td>onPress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps the numeric key, need to be defined in parent component</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- NumericKeyboard code sample -->
+          <p class="code-title">NumericKeyboard Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import NumericKeyboard from "../../components/keyboard/NumericKeyboard";
+
+                ...
+
+                <NumericKeyboard
+                  actionButtonTitle="skip"
+                  onPress={this.pressKeyboardButton}
+                />
+              </script>
+            </code>
+          </pre>
+        </div>
+
+        <!-- LOGO -->
+        <div id="logo" class="section-subsection">
+          <h2 class="section-subheading">Logo</h2>
+          <p class="section-description">
+            This component is used to display the brand logo
+          </p>
+
+          <!-- Logo Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>logoStyle</td>
+                <td>object (style)</td>
+                <td>-</td>
+                <td>Style for logo component</td>
+              </tr>
+              <tr>
+                <td>size</td>
+                <td>string ( 'small' , 'medium' , 'large' ) or number</td>
+                <td>'small'</td>
+                <td>Defines the size (width and height) of the logo</td>
+              </tr>
+              <tr>
+                <td>tintColor</td>
+                <td>color</td>
+                <td>-</td>
+                <td>Logo overlay color</td>
+              </tr>
+              <tr>
+                <td>type</td>
+                <td>string ( 'text-wide' )</td>
+                <td>-</td>
+                <td>Used for wide text logo</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Logo code sample -->
+          <p class="code-title">Logo Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import Logo from "../../components/logo/Logo";
+
+                ...
+
+                <Logo size={120} tintColor="#ff0000" />
+              </script>
+            </code>
+          </pre>
+        </div>
+
+        <!-- MODALS -->
+        <div id="modals" class="section-subsection">
+          <h2 class="section-subheading">Modals</h2>
+          <p class="section-description">
+            Custom pop-up modal component.
+          </p>
+
+          <h3 class="component-name">ActivityIndicatorModal</h3>
+          <!-- ActivityIndicatorModal Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>message</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Loading indicator short message</td>
+              </tr>
+              <tr>
+                <td>onRequestClose</td>
+                <td>function</td>
+                <td>-</td>
+                <td>The onRequestClose callback is called when the user taps the hardware back button on Android</td>
+              </tr>
+              <tr>
+                <td>statusBarColor</td>
+                <td>color</td>
+                <td>"rgba(0, 0, 0, 0.2)"</td>
+                <td>The background color of the status bar</td>
+              </tr>
+              <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Loading indicator short title</td>
+              </tr>
+              <tr>
+                <td>visible</td>
+                <td>boolean</td>
+                <td>-</td>
+                <td>The visible prop determines whether your modal is visible</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- ActivityIndicatorModal code sample -->
+          <p class="code-title">ActivityIndicatorModal Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import ActivityIndicatorModal from "../../components/modals/ActivityIndicatorModal";
+
+                ...
+
+                <ActivityIndicatorModal
+                  message="Please wait . . ."
+                  onRequestClose={this.closeModal}
+                  title="Loading"
+                  visible={true}
+                />
+              </script>
+            </code>
+          </pre>
+
+          <h3 class="component-name">InfoModal</h3>
+          <!-- InfoModal Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>buttonTitle</td>
+                <td>string</td>
+                <td>-</td>
+                <td>InfoModal action button title</td>
+              </tr>
+              <tr>
+                <td>message</td>
+                <td>string</td>
+                <td>-</td>
+                <td>InfoModal short message</td>
+              </tr>
+              <tr>
+                <td>iconColor</td>
+                <td>color</td>
+                <td>-</td>
+                <td>Modal's icon color</td>
+              </tr>
+              <tr>
+                <td>iconName</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Ionicons icon name</td>
+              </tr>
+              <tr>
+                <td>onButtonPress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>The onButtonPress callback is called when the user taps the modal action button</td>
+              </tr>
+              <tr>
+                <td>onRequestClose</td>
+                <td>function</td>
+                <td>-</td>
+                <td>The onRequestClose callback is called when the user taps the hardware back button on Android</td>
+              </tr>
+              <tr>
+                <td>statusBarColor</td>
+                <td>color</td>
+                <td>"rgba(0, 0, 0, 0.2)"</td>
+                <td>The background color of the status bar</td>
+              </tr>
+              <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Loading indicator short title</td>
+              </tr>
+              <tr>
+                <td>visible</td>
+                <td>boolean</td>
+                <td>-</td>
+                <td>The visible prop determines whether your modal is visible</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- InfoModal code sample -->
+          <p class="code-title">InfoModal Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import InfoModal from "../../components/modals/InfoModal";
+
+                ...
+
+                <InfoModal
+                  iconName="ios-checkmark-circle-outline"
+                  iconColor="#ff0000"
+                  title="Success!"
+                  message="Order placed successfully. For more details check your orders."
+                  buttonTitle="Back to shopping"
+                  onButtonPress={this.doSomething}
+                  onRequestClose={this.closeInfoModal(false)}
+                  visible={true}
+                />
+              </script>
+            </code>
+          </pre>
+
+          <h3 class="component-name">InputModal</h3>
+          <!-- InputModal Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>buttonTitle</td>
+                <td>string</td>
+                <td>-</td>
+                <td>InputModal action button title</td>
+              </tr>
+              <tr>
+                <td>message</td>
+                <td>string</td>
+                <td>-</td>
+                <td>InputModal short message</td>
+              </tr>
+              <tr>
+                <td>inputDefaultValue</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Provides an initial value that will change when the user starts typing</td>
+              </tr>
+              <tr>
+                <td>inputKeyboardType</td>
+                <td>string ("default", "number-pad", "numeric", "email-address", "phone-pad")</td>
+                <td>-</td>
+                <td>Determines which keyboard to open</td>
+              </tr>
+              <tr>
+                <td>inputPlaceholder</td>
+                <td>string</td>
+                <td>-</td>
+                <td>The string that will be rendered before text input has been entered</td>
+              </tr>
+              <tr>
+                <td>onButtonPress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>The onButtonPress callback is called when the user taps the modal action button</td>
+              </tr>
+              <tr>
+                <td>onClosePress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>The onClosePress callback is called when the user taps the modal close button</td>
+              </tr>
+              <tr>
+                <td>onRequestClose</td>
+                <td>function</td>
+                <td>-</td>
+                <td>The onRequestClose callback is called when the user taps the hardware back button on Android</td>
+              </tr>
+              <tr>
+                <td>statusBarColor</td>
+                <td>color</td>
+                <td>"rgba(0, 0, 0, 0.2)"</td>
+                <td>The background color of the status bar</td>
+              </tr>
+              <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Loading indicator short title</td>
+              </tr>
+              <tr>
+                <td>visible</td>
+                <td>boolean</td>
+                <td>-</td>
+                <td>The visible prop determines whether your modal is visible</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- InputModal code sample -->
+          <p class="code-title">InputModal Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import InputModal from "../../components/modals/InputModal";
+
+                ...
+
+                <InputModal
+                  title="Forgot password?"
+                  message="Enter your e-mail address to reset password"
+                  inputPlaceholder="E-mail address"
+                  inputKeyboardType="email-address"
+                  onRequestClose={this.showInputModal(false)}
+                  buttonTitle="Reset password"
+                  onClosePress={this.showInputModal(false)}
+                  visible={true}
+                />
+              </script>
+            </code>
+          </pre>
+        </div>
+
+        <!-- NAVIGATION -->
+        <div id="navigation" class="section-subsection">
+          <h2 class="section-subheading">Navigation</h2>
+          <p class="section-description">
+            Navigation header and tab bar components
+          </p>
+
+          <h3 class="component-name">HeaderIconButton</h3>
+          <!-- HeaderIconButton Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>color</td>
+                <td>color</td>
+                <td>-</td>
+                <td>Color of the icon</td>
+              </tr>
+              <tr>
+                <td>name</td>
+                <td>string</td>
+                <td>-</td>
+                <td>What Ionicons to show</td>
+              </tr>
+              <tr>
+                <td>onPress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps the icon button</td>
+              </tr>
+              <tr>
+                <td>rippleColor</td>
+                <td>color</td>
+                <td>"rgba(0, 0, 0, 0.32)"</td>
+                <td>Android ripple color</td>
+              </tr>
+              <tr>
+                <td>size</td>
+                <td>number</td>
+                <td>24</td>
+                <td>Size of the icon</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- HeaderIconButton code sample -->
+          <p class="code-title">HeaderIconButton Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import HeaderIconButton from "../../components/navigation/HeaderIconButton";
+
+                ...
+
+                <HeaderIconButton
+                  onPress={this.doSomething}
+                  name="ios-checkmark"
+                  color="#00ff00"
+                />
+              </script>
+            </code>
+          </pre>
+
+          <h3 class="component-name">TabBadgeIcon</h3>
+          <!-- TabBadgeIcon Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>focused</td>
+                <td>boolean</td>
+                <td>-</td>
+                <td>Indicates whether a particular tab is in focus</td>
+              </tr>
+              <tr>
+                <td>tintColor</td>
+                <td>color</td>
+                <td>-</td>
+                <td>Is either the active or inactive one, depending on the focused state</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- TabBadgeIcon code sample -->
+          <p class="code-title">TabBadgeIcon Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import TabBadgeIcon from "../components/navigation/TabBadgeIcon";
+
+                ...
+
+                <TabBadgeIcon focused={focused} tintColor={tintColor} />
+              </script>
+            </code>
+          </pre>
+        </div>
+
+        <!-- PICKERS -->
+        <div id="pickers" class="section-subsection">
+          <h2 class="section-subheading">Pickers</h2>
+          <p class="section-description">
+            Single item picker
+          </p>
+
+          <h3 class="component-name">FilterPicker</h3>
+          <!-- FilterPicker Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>activeOpacity</td>
+                <td>number</td>
+                <td>-</td>
+                <td>Determines what the opacity of the wrapped view should be when touch is active. The value should be between 0 and 1</td>
+              </tr>
+              <tr>
+                <td>color</td>
+                <td>color</td>
+                <td>-</td>
+                <td>Filter picker background color</td>
+              </tr>
+              <tr>
+                <td>onPress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps the filter picker</td>
+              </tr>
+              <tr>
+                <td>picked</td>
+                <td>boolen</td>
+                <td>-</td>
+                <td>If true, mark selected picker option</td>
+              </tr>
+              <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Filter picker text</td>
+              </tr>
+              <tr>
+                <td>titleStyle</td>
+                <td>object (style)</td>
+                <td>-</td>
+                <td>Style of the picker title</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- FilterPicker code sample -->
+          <p class="code-title">FilterPicker Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import FilterPicker from "../../components/pickers/FilterPicker";
+
+                ...
+
+                <FilterPicker
+                  onPress={this.handleFilterPress(item)}
+                  picked={true}
+                  title="Italian"
+                />
+              </script>
+            </code>
+          </pre>
+
+          <h3 class="component-name">PaymentPicker</h3>
+          <!-- PaymentPicker Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>iconColor</td>
+                <td>color</td>
+                <td>Color(Colors.black).alpha(0.8).string()</td>
+                <td>Payment picker icon color</td>
+              </tr>
+              <tr>
+                <td>iconName</td>
+                <td>string ("credit-card", "money", "bank", "apple", "google", "paypal", "google-wallet", "cc-stripe")</td>
+                <td>-</td>
+                <td>FontAwesome icon name, e.g. "credit-card", "google", ...</td>
+              </tr>
+              <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Payment picker title</td>
+              </tr>
+              <tr>
+                <td>numberOfItems</td>
+                <td>number</td>
+                <td>-</td>
+                <td>Indicates the number of payment methods added</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- PaymentPicker code sample -->
+          <p class="code-title">PaymentPicker Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import PaymentPicker from "../../components/pickers/PaymentPicker";
+
+                ...
+
+                <PaymentPicker
+                  iconName="paypal"
+                  title="PayPal"
+                  numberOfItems={1}
+                />
+              </script>
+            </code>
+          </pre>
+
+          <h3 class="component-name">SizePicker</h3>
+          <!-- SizePicker Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>activeOpacity</td>
+                <td>number</td>
+                <td>-</td>
+                <td>Determines what the opacity of the wrapped view should be when touch is active. The value should be between 0 and 1</td>
+              </tr>
+              <tr>
+                <td>color</td>
+                <td>color</td>
+                <td>-</td>
+                <td>SizePicker background color</td>
+              </tr>
+              <tr>
+                <td>onPress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Handler to be called when the user taps the size picker</td>
+              </tr>
+              <tr>
+                <td>picked</td>
+                <td>boolen</td>
+                <td>-</td>
+                <td>If true, mark selected picker option</td>
+              </tr>
+              <tr>
+                <td>title</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Size picker text</td>
+              </tr>
+              <tr>
+                <td>titleStyle</td>
+                <td>object (style)</td>
+                <td>-</td>
+                <td>Style of the picker title</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- SizePicker code sample -->
+          <p class="code-title">SizePicker Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import SizePicker from "../../components/pickers/SizePicker";
+
+                ...
+
+                <SizePicker
+                  title="Small"
+                  onPress={this.setServingSize(1)}
+                  picked={true}
+                />
+                <SizePicker
+                  title="Large"
+                  onPress={this.setServingSize(2)}
+                  picked={false}
+                />
+              </script>
+            </code>
+          </pre>
+        </div>
+
+        <!-- PRICERATING -->
+        <div id="pricerating" class="section-subsection">
+          <h2 class="section-subheading">PriceRating</h2>
+          <p class="section-description">
+            This component is used to display simple price rating
+          </p>
+
+          <!-- PriceRating Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>currencySize</td>
+                <td>number</td>
+                <td>12</td>
+                <td>Currency icon size</td>
+              </tr>
+              <tr>
+                <td>currencyColor</td>
+                <td>color</td>
+                <td>Colors.primaryColor</td>
+                <td>Currency icon color</td>
+              </tr>
+              <tr>
+                <td>price</td>
+                <td>number</td>
+                <td>0</td>
+                <td>Determines what is the price rating of the restaurant or any item. The value should be between 0 and 4</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- PriceRating code sample -->
+          <p class="code-title">PriceRating Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import PriceRating from "../../components/pricerating/PriceRating";
+
+                ...
+
+                <PriceRating currencySize={14} currencyColor="green" price={3} />
+              </script>
+            </code>
+          </pre>
+        </div>
+
+        <!-- STARRATING -->
+        <div id="starrating" class="section-subsection">
+          <h2 class="section-subheading">StarRating</h2>
+          <p class="section-description">
+            This component is used to display simple star rating
+          </p>
+
+          <!-- StarRating Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>rating</td>
+                <td>number</td>
+                <td>0</td>
+                <td>Determines what the rating of the product or any item. The value should be between 0 and 5</td>
+              </tr>
+              <tr>
+                <td>starColor</td>
+                <td>color</td>
+                <td>'#ffc06b'</td>
+                <td>Star rating icon color</td>
+              </tr>
+              <tr>
+                <td>starSize</td>
+                <td>number</td>
+                <td>14</td>
+                <td>Star rating icon size</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- StarRating code sample -->
+          <p class="code-title">StarRating Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import StarRating from "../../components/starrating/StarRating";
+
+                ...
+
+                <StarRating rating={3.8} starColor="#0000ff" starSize={22} />
+              </script>
+            </code>
+          </pre>
+        </div>
+
+        <!-- TEXT -->
+        <div id="text" class="section-subsection">
+          <h2 class="section-subheading">Text</h2>
+          <p class="section-description">
+            This component is used to display predefined text (typography).
+          </p>
+
+          <h3 class="component-name">CustomText</h3>
+          <!-- CustomText Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>All props are inherited from react native Text component</td>
+                <td>-</td>
+                <td>-</td>
+                <td><a href="https://facebook.github.io/react-native/docs/text#props" target="_blank" class="text-link">List of Text props</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- CustomText code sample -->
+          <p class="code-title">CustomText Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                  import {
+                    Caption,
+                    Heading1,
+                    Heading2,
+                    Heading3,
+                    Heading4,
+                    Heading5,
+                    Heading6,
+                    Title,
+                    Subtitle1,
+                    Subtitle2,
+                    Text,
+                    Paragraph
+                  } from '../../components/text/CustomText';
+
+                ...
+
+                <Caption>Some text</Caption>
+                <Heading1>Some text</Heading1>
+                <Heading2>Some text</Heading2>
+                .
+                . 
+                . 
+                <Paragraph>Some text</Paragraph>
+              </script>
+            </code>
+          </pre>
+        </div>
+
+        <!-- TEXTINPUTS -->
+        <div id="textinputs" class="section-subsection">
+          <h2 class="section-subheading">TextInputs</h2>
+          <p class="section-description">
+            A foundational components for inputting text into the app via a keyboard.
+          </p>
+
+          <h3 class="component-name">UnderlinePasswordInput</h3>
+          <!-- UnderlinePasswordInput Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>borderColor</td>
+                <td>color</td>
+                <td>'rgba(0, 0, 0, 0.2)'</td>
+                <td>Text input underline border color</td>
+              </tr>
+              <tr>
+                <td>focusedBorderColor</td>
+                <td>color</td>
+                <td>-</td>
+                <td>Text input underline border color when input is in focus</td>
+              </tr>
+              <tr>
+                <td>inputFocused</td>
+                <td>boolean</td>
+                <td>-</td>
+                <td>Indicates whether a particular input is in focus</td>
+              </tr>
+              <tr>
+                <td>inputTextColor</td>
+                <td>function</td>
+                <td>-</td>
+                <td>The color of the text input's text</td>
+              </tr>
+              <tr>
+                <td>onChangeText</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Callback that is called when the text input's text changes</td>
+              </tr>
+              <tr>
+                <td>onFocus</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Callback that is called when the text input is focused</td>
+              </tr>
+              <tr>
+                <td>onRef</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Callback that adds specific unique ref to the text input. This callback will be executed immediately after the component is mounted</td>
+              </tr>
+              <tr>
+                <td>onSubmitEditing</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Callback that is called when the text input's submit button is pressed</td>
+              </tr>
+              <tr>
+                <td>onTogglePress</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Callback that is called when the text input's toggleText button is pressed. Toogles secureTextEntry true / false</td>
+              </tr>
+              <tr>
+                <td>placeholder</td>
+                <td>string</td>
+                <td>-</td>
+                <td>The string that will be rendered before text input has been entered</td>
+              </tr>
+              <tr>
+                <td>placeholderTextColor</td>
+                <td>color</td>
+                <td>-</td>
+                <td>The text color of the placeholder string</td>
+              </tr>
+              <tr>
+                <td>returnKeyType</td>
+                <td>string ( 'done', 'go', 'next', 'search', 'send' )</td>
+                <td>-</td>
+                <td>Determines how the return key should look</td>
+              </tr>
+              <tr>
+                <td>secureTextEntry</td>
+                <td>boolean</td>
+                <td>-</td>
+                <td>If true, the text input obscures the text entered so that sensitive text like passwords stay secure. The default value is true</td>
+              </tr>
+              <tr>
+                <td>toggleText</td>
+                <td>string</td>
+                <td>-</td>
+                <td>Toogle button's text</td>
+              </tr>
+              <tr>
+                <td>toggleVisible</td>
+                <td>boolean</td>
+                <td>-</td>
+                <td>If true, toogle button will be visible</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- UnderlinePasswordInput code sample -->
+          <p class="code-title">UnderlinePasswordInput Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                // source SignInA.js
+                import UnderlinePasswordInput from "../../components/textinputs/UnderlinePasswordInput";
+
+                ...
+
+                <UnderlinePasswordInput
+                  onRef={r => {
+                    this.password = r;
+                  }}
+                  onChangeText={this.passwordChange}
+                  onFocus={this.passwordFocus}
+                  inputFocused={true}
+                  onSubmitEditing={this.onSubmitEditing}
+                  returnKeyType="done"
+                  placeholder="Password"
+                  placeholderTextColor="#000"
+                  inputTextColor="#ff0000"
+                  secureTextEntry={secureTextEntry}
+                  borderColor="#ff0000"
+                  focusedBorderColor="#00ff00"
+                  toggleVisible={true}
+                  toggleText={secureTextEntry ? "Show" : "Hide"}
+                  onTogglePress={this.onTogglePress}
+                />
+              </script>
+            </code>
+          </pre>
+
+          <h3 class="component-name">UnderlineTextInput</h3>
+          <!-- UnderlineTextInput Props -->
+          <table>
+            <thead>
+              <tr>
+                <th>Prop</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>autoCapitalize</td>
+                <td>string ( 'none', 'sentences', 'words', 'numeric', 'characters' )</td>
+                <td>'none'</td>
+                <td>Can tell UnderlineTextInput to automatically capitalize certain characters</td>
+              </tr>
+              <tr>
+                <td>borderColor</td>
+                <td>color</td>
+                <td>'rgba(0, 0, 0, 0.2)'</td>
+                <td>Text input underline border color</td>
+              </tr>
+              <tr>
+                <td>blurOnSubmit</td>
+                <td>boolean</td>
+                <td>-</td>
+                <td>If true, the text field will blur when submitted</td>
+              </tr>
+              <tr>
+                <td>focusedBorderColor</td>
+                <td>color</td>
+                <td>-</td>
+                <td>Text input underline border color when input is in focus</td>
+              </tr>
+              <tr>
+                <td>inputContainerStyle</td>
+                <td>object (style)</td>
+                <td>-</td>
+                <td>Style for UnderlineTextInput container</td>
+              </tr>
+              <tr>
+                <td>inputFocused</td>
+                <td>boolean</td>
+                <td>-</td>
+                <td>Indicates whether a particular input is in focus</td>
+              </tr>
+              <tr>
+                <td>inputTextColor</td>
+                <td>color</td>
+                <td>-</td>
+                <td>The color of the text input's text</td>
+              </tr>
+              <tr>
+                <td>inputStyle</td>
+                <td>object (style)</td>
+                <td>-</td>
+                <td>Style for UnderlineTextInput component</td>
+              </tr>
+              <tr>
+                <td>keyboardType</td>
+                <td>string ( 'default', 'number-pad', 'decimal-pad', 'numeric', 'email-address', 'phone-pad' )</td>
+                <td>-</td>
+                <td>Determines which keyboard to open, e.g.numeric</td>
+              </tr>
+              <tr>
+                <td>onChangeText</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Callback that is called when the text input's text changes</td>
+              </tr>
+              <tr>
+                <td>onFocus</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Callback that is called when the text input is focused</td>
+              </tr>
+              <tr>
+                <td>onRef</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Callback that adds specific unique ref to the text input. This callback will be executed immediately after the component is mounted</td>
+              </tr>
+              <tr>
+                <td>onSubmitEditing</td>
+                <td>function</td>
+                <td>-</td>
+                <td>Callback that is called when the text input's submit button is pressed</td>
+              </tr>
+              <tr>
+                <td>placeholder</td>
+                <td>string</td>
+                <td>-</td>
+                <td>The string that will be rendered before text input has been entered</td>
+              </tr>
+              <tr>
+                <td>placeholderTextColor</td>
+                <td>color</td>
+                <td>-</td>
+                <td>The text color of the placeholder string</td>
+              </tr>
+              <tr>
+                <td>returnKeyType</td>
+                <td>string ( 'done', 'go', 'next', 'search', 'send' )</td>
+                <td>-</td>
+                <td>Determines how the return key should look</td>
+              </tr>
+              <tr>
+                <td>secureTextEntry</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>If true, the text input obscures the text entered so that sensitive text like passwords stay secure</td>
+              </tr>
+              <tr>
+                <td>value</td>
+                <td>string</td>
+                <td>-</td>
+                <td>The value to show for the text input</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- UnderlineTextInput code sample -->
+          <p class="code-title">UnderlineTextInput Usage Syntax</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                // source SignInA.js
+                import UnderlineTextInput from "../../components/textinputs/UnderlineTextInput";
+
+                ...
+
+                <UnderlineTextInput
+                  onRef={r => {
+                    this.password = r;
+                  }}
+                  onChangeText={this.passwordChange}
+                  onFocus={this.passwordFocus}
+                  inputFocused={true}
+                  onSubmitEditing={this.onSubmitEditing}
+                  returnKeyType="done"
+                  placeholder="Password"
+                  placeholderTextColor="#000"
+                  inputTextColor="#ff0000"
+                  borderColor="#ff0000"
+                  focusedBorderColor="#00ff00"
+                />
+              </script>
+            </code>
+          </pre>
+        </div>
+      </section>
+
+      <!-- SCREENS -->
+      <section id="screens" class="section">
+        <header class="section-header">
+          <h1 class="section-heading">Screens</h1>
+          <p class="section-description">
+            The following is the list of screens provided by this template.
+          </p>
+        </header>
+
+        <p class="section-description">
+          All screen layouts are well organized and grouped into folders as shown in the image below.
+        </p>
+        <p class="code-title">./src/screens</p>
+        <img class="medium-img" src="assets/img/screens.png" alt="screens" />
+
+        <p class="section-description">
+          Each screen layout has two or more different types of designs that we have labeled A, B, C, ... For example, the SignUp screen layouts.
+        </p>
+        <p class="code-title">./src/screens/signup</p>
+        <img class="medium-img" src="assets/img/screen_sample.png" alt="screen sample" />
+
+        <p class="section-description">
+          You can choose the design that best suits your needs.
+          Design A is characterized by a light background with flat buttons, B design is with a gradient background and contained buttons, while the C design has a background image and rounded buttons.
+        </p>
+        <div class="img-grid">
+          <div class="column">
+            <p class="code-title">./src/screens/signup/SignUpA.js</p>
+            <img class="medium-img" src="assets/img/A_02_SignUp.png" alt="SignUp A" />
+          </div>
+          <div class="column">
+            <p class="code-title">./src/screens/signup/SignUpB.js</p>
+            <img class="medium-img" src="assets/img/B_02_SignUp.png" alt="SignUp B" />
+          </div>
+          <div class="column">
+            <p class="code-title">./src/screens/signup/SignUpC.js</p>
+            <img class="medium-img" src="assets/img/C_02_SignUp.png" alt="SignUp C" />
+          </div>
+        </div>
+
+        <p class="section-description">
+          The design of each screen layout changes quickly and easily.
+          For basic changes just edit the Screen Config lines of code in the file (highlighted in the image below).
+          You can also change the styles as well as the screen layout structure.
+          This applies to all screen layouts because all files have a similar code structure.
+        </p>
+        <img class="medium-img" src="assets/img/screen_code.png" alt="screen code" />
+      </section>
+
+      <!-- CUSTOMIZATION -->
+      <section id="customization" class="section">
+        <header class="section-header">
+          <h1 class="section-heading">Customization</h1>
+          <p class="section-description">
+            Short instructions for adjustments and changes.
+          </p>
+        </header>
+
+        <p class="section-description">
+          <b>1) Choose application design type</b>
+        </p>
+        <p class="section-description">
+          There are two predefined navigators in our application.
+          <i>MainNavigatorA</i> contains all screen layouts characterized by a light background with flat buttons (as described above in Screens section of this document).
+          While <i>MainNavigatorB</i> contains all screen layouts with a gradient backgrounds, colorful appbar and contained buttons. Choose the one that suits you best.
+          <i>MainNavigatorA</i> is imported by default.
+        </p>
+        <p class="code-title">App.js </p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                import React from "react";
+
+                ...
+
+                // import MainNavigatorA or MainNavigatorB to preview design differnces
+                import MainNavigator from "./src/navigation/MainNavigatorA";
+
+                // APP
+                function App() {
+                  return (
+                    <SafeAreaProvider>
+                      <MainNavigator />
+                    </SafeAreaProvider>
+                  );
+                }
+
+                export default App;
+              </script>
+            </code>
+          </pre>
+
+          <p class="section-description">
+            <b>2) Choose application color theme</b>
+          </p>
+          <p class="section-description">
+            Go to <i>./src/config/index.js</i>.
+            There are three predefined color themes: "jade", "redOrange" and "blueberry".
+            Color theme "jade" is selected by default.
+          </p>
+          <p class="code-title">./src/config/index.js</p>
+          <pre>
+            <code class="language-jsx">
+              <script type="prism-jsx">
+                const config = {
+                  /*
+                    theme: 'jade' | 'redOrange' | 'blueberry'
+                   */
+                  theme: "jade"
+                };
+                
+                export default config;
+              </script>
+            </code>
+          </pre>
+      </section>
+
+      <!-- CHANGELOG -->
+      <section id="changelog" class="section">
+        <header class="section-header">
+          <h1 class="section-heading">Changelog</h1>
+          <p class="section-description">
+            This section includes record of all notable changes made to a project.
+          </p>
+        </header>
+
+        <pre>
+          <code class="language-markup">
+            <script type="prism-markup">
+              # Update v2.0.0 - (April 19, 2020)
+                - Pro version upgrade React Native to 0.62 (important)
+                - Expo version upgrade Expo SDK to 37 (important)
+                - Upgrade all dependencies
+                - RTL ready Screen Containers (Layouts)
+                - Add 2 new Add Credit Card Screen Layouts
+
+              # Update v1.0.3 - (January 22, 2020)
+                - Expo version upgrade Expo SDK to 35 (important)
+                - Update HomeNavigatorB, MainNavigatorA, MainNavigatorB (important)
+                - Update CartB, HomeB, SettingsA screens, Product Card component (important)
+                - Add new Notifications Screen Layout
+                - Add new Payment Method Screen Layout
+                - Add new Search Screen Layout
+                - Add new Search Filter Screen Layout
+                - Add Payment Picker component
+                - Add Filter Picker component
+                - Add Simple Product Card component
+                - Add Notification Item component
+                - CSS improvements
+
+              # Update v1.0.2 - (November 06, 2019)
+                - Update Cart and Favorites empty state (important)
+                - Add new Product Screen Layout
+                - Add new Home Screen Layout
+                - Add new Onboarding Screen Layout
+                - Add 2 new Edit Addres Screen Layouts
+                - Add PriceRating component
+                - Add EmptyState component
+                - Add 2 new Card components
+                - colors.js typo fix (important)
+
+              # Update v1.0.1 - (October 15, 2019)
+                - Add 2 new Terms and Conditions Screen Layouts
+                - Add 2 new Forgot Password Screen Layouts
+                - Add 2 new Add New Address Screen Layouts
+
+              # Initial Release v1.0.0 - (September 27, 2019)
+            </script>
+          </code>
+        </pre>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section">
+        <header class="section-header">
+          <h1 class="section-heading">Frequently Asked Question</h1>
+          <p class="section-description">
+            Everything you need to know so you can use FoodDelivery like a pro.
+          </p>
+        </header>
+
+        <p class="section-description">
+          This section will be updated in future releases depending on the frequent customer questions.
+        </p>
+      </section>
+
+      <!-- THANK-YOU NOTE-->
+      <section id="thank-you-note" class="section">
+        <p class="section-description">
+          Once again, thank you so much for purchasing this mobile application template.
+          As we said at the beginning, we would be glad to help you if you have any questions, you want to suggest some improvements or adding new screen layouts relating to this mobile application template.
+          No guarantees, but we will do our best to assist.
+          If you have a more general question relating to the mobile application template on CodeCanyon, you might consider visiting the forums and asking your question in the "<a href="https://codecanyon.net/item/food-delivery-react-native-template/24699883/comments" class="text-link" target="_blank">Item Discussion (Comments)</a>" section or contact us via email <a href="mailto:dev.appdrops@gmail.com" class="text-link">dev.appdrops@gmail.com</a>.
+        </p>
+
+        <p class="section-description">
+          <b><i>AppDrops Team</i></b>
+        </p>
+      </section>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="assets/js/prism.js" data-manual></script>
+  
+    <script src="assets/js/scripts.js"></script>
+  </body>
+</html>
